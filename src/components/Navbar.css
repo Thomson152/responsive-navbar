@@ -1,0 +1,73 @@
+/** @format */
+
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
+  background-color: rgb(58, 58, 160);
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+ box-shadow: 4px 10px #fff;
+  font-size: 2rem;
+}
+
+.logo a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 2rem;
+}
+.nav-links {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  list-style: none !important;
+}
+.nav-link a {
+  text-decoration: none !important;
+  color: aliceblue;
+  transition: 0.3s all;
+  font-size: 1.3rem;
+}
+.nav-link :hover {
+  color: rgb(225, 84, 84);
+}
+
+.icons .MuiSvgIcon-root {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    position: relative;
+
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    transition: 0.5s all;
+  }
+  .nav-links.active {
+    background-color: rgb(58, 58, 160);
+
+    left: 0px;
+  }
+  .nav-link {
+    padding-top: 10px;
+    padding-left: 0px;
+  }
+  .icons .MuiSvgIcon-root {
+    display: block;
+ 
+  }
+}
